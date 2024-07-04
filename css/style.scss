@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a {
+  color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+img {
+  vertical-align: top;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Poppins, sans-serif;
+}
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  padding: 50px;
+}
+.product {
+  // .product__cards
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-items: center;
+    gap: 20px;
+  }
+
+  // .product__card
+
+  &__card {
+  }
+}
+.card {
+  width: 234px;
+  padding: 7px 24px;
+  background-color: rgb(255, 255, 255);
+
+  // .card__availability
+
+  &__availability {
+    color: #78a962;
+    margin: 0 0 7px 0;
+  }
+  &__availability::before {
+    content: "";
+    display: inline-block;
+    margin: 0 5px 0 0;
+    width: 10px;
+    height: 10px;
+    background: url(../img/stock.svg) no-repeat;
+  }
+
+  // .card__image
+
+  &__image {
+    width: 100%;
+  }
+
+  // .card__reviews
+
+  &__reviews {
+    display: flex;
+    gap: 9px;
+    margin: 0 0 7px 0;
+  }
+
+  // .card__description
+
+  &__description {
+    font-size: 13px;
+    margin: 0 0 20px 0;
+  }
+
+  // .card__old-price
+
+  &__old-price {
+    margin: 0 0 10px 0;
+    color: #666666;
+    text-decoration: line-through;
+    font-size: 14px;
+  }
+
+  // .card__price
+
+  &__price {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+.card:hover{
+  box-shadow: 0px 10px 20px rgb(235, 235, 235);
+}
+.star-rating {
+  cursor: pointer;
+  color: #cacdd8;
+  transition: color 0.2s;
+}
+// .star-rating:hover,
+// .star.selected,
+// .star.selected ~ .star {
+//   color: #e9a426;
+// }
+.card__reviews__review {
+  color: #a2a6b0;
+}
+.active{
+  color: #e9a426;
+}
